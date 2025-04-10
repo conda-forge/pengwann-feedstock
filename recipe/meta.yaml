@@ -10,7 +10,7 @@ source:
   sha256: 51de304e80e466297309623d9bba3adf5fcad3f90a97ff8de6d4f303839e2764
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py<310]
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -47,7 +47,12 @@ test:
 
 about:
   home: https://github.com/PatrickJTaylor/pengWann
+  dev_url: https://github.com/PatrickJTaylor/pengWann
+  doc_url: https://pengwann.readthedocs.io
   summary: Computation of chemical bonding descriptors from Wannier functions
+  description: |
+    A lightweight Python package for calculating descriptors of chemical bonding and
+    local electronic structure from Wannier functions.
   license: GPL-3.0-or-later
   license_file:
     - LICENSE
