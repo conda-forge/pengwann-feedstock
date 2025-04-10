@@ -9,6 +9,14 @@ Package license: GPL-3.0-or-later
 
 Summary: Computation of chemical bonding descriptors from Wannier functions
 
+Development: https://github.com/PatrickJTaylor/pengWann
+
+Documentation: https://pengwann.readthedocs.io
+
+A lightweight Python package for calculating descriptors of chemical bonding and
+local electronic structure from Wannier functions.
+
+
 Current build status
 ====================
 
