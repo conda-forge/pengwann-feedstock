@@ -1,5 +1,5 @@
 {% set name = "pengwann" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pengwann-{{ version }}.tar.gz
-  sha256: 51de304e80e466297309623d9bba3adf5fcad3f90a97ff8de6d4f303839e2764
+  sha256: 33c47439a4c4d9106f882d6b9037f9c808f6e79923240d14b88f7ea5cd5e58ba
 
 build:
-  number: 1
-  skip: True  # [py<310]
+  number: 0
+  skip: true  # [py<310]
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cd rust
