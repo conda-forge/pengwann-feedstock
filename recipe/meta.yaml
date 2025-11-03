@@ -10,9 +10,10 @@ source:
   sha256: 33c47439a4c4d9106f882d6b9037f9c808f6e79923240d14b88f7ea5cd5e58ba
 
 build:
-  number: 0
-  skip: true  # [py<310]
+  number: 1
   script:
+    - set PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1  # [win and py==314]
+    - export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1  # [unix and py==314]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cd rust
     - cargo-bundle-licenses --format yaml --output ../THIRDPARTY.yml
